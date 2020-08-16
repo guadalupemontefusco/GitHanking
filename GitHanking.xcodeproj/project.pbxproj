@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		D70AB7B324E95BBD000F9308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB7B224E95BBD000F9308 /* AppDelegate.swift */; };
 		D70AB7B524E95BBD000F9308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB7B424E95BBD000F9308 /* SceneDelegate.swift */; };
-		D70AB7B724E95BBD000F9308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB7B624E95BBD000F9308 /* ViewController.swift */; };
-		D70AB7BA24E95BBD000F9308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7B824E95BBD000F9308 /* Main.storyboard */; };
 		D70AB7BC24E95BC0000F9308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7BB24E95BC0000F9308 /* Assets.xcassets */; };
 		D70AB7BF24E95BC0000F9308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7BD24E95BC0000F9308 /* LaunchScreen.storyboard */; };
 		D70AB7CA24E95BC0000F9308 /* GitHankingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB7C924E95BC0000F9308 /* GitHankingTests.swift */; };
 		D70AB7D524E95BC0000F9308 /* GitHankingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB7D424E95BC0000F9308 /* GitHankingUITests.swift */; };
+		D70AB7E824E95CB9000F9308 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB7E724E95CB9000F9308 /* RepositoryListViewController.swift */; };
+		D70AB7EA24E95D6F000F9308 /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */; };
+		D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */; };
+		D70AB82A24E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		D70AB7AF24E95BBD000F9308 /* GitHanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70AB7B224E95BBD000F9308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70AB7B424E95BBD000F9308 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D70AB7B624E95BBD000F9308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D70AB7B924E95BBD000F9308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D70AB7BB24E95BC0000F9308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D70AB7BE24E95BC0000F9308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D70AB7C024E95BC0000F9308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,10 @@
 		D70AB7D024E95BC0000F9308 /* GitHankingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHankingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70AB7D424E95BC0000F9308 /* GitHankingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHankingUITests.swift; sourceTree = "<group>"; };
 		D70AB7D624E95BC0000F9308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D70AB7E724E95CB9000F9308 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
+		D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRepositoryInfoTableViewCell.swift; sourceTree = "<group>"; };
+		D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicRepositoryInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 		D70AB7B124E95BBD000F9308 /* GitHanking */ = {
 			isa = PBXGroup;
 			children = (
+				D70AB7E624E95C4A000F9308 /* Network */,
+				D70AB7E524E95C41000F9308 /* ViewModel */,
+				D70AB7E424E95C38000F9308 /* Model */,
+				D70AB7E224E95C1E000F9308 /* View */,
 				D70AB7B224E95BBD000F9308 /* AppDelegate.swift */,
 				D70AB7B424E95BBD000F9308 /* SceneDelegate.swift */,
-				D70AB7B624E95BBD000F9308 /* ViewController.swift */,
-				D70AB7B824E95BBD000F9308 /* Main.storyboard */,
 				D70AB7BB24E95BC0000F9308 /* Assets.xcassets */,
 				D70AB7BD24E95BC0000F9308 /* LaunchScreen.storyboard */,
 				D70AB7C024E95BC0000F9308 /* Info.plist */,
@@ -126,6 +132,38 @@
 				D70AB7D624E95BC0000F9308 /* Info.plist */,
 			);
 			path = GitHankingUITests;
+			sourceTree = "<group>";
+		};
+		D70AB7E224E95C1E000F9308 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D70AB7E724E95CB9000F9308 /* RepositoryListViewController.swift */,
+				D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */,
+				D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */,
+				D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D70AB7E424E95C38000F9308 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D70AB7E524E95C41000F9308 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D70AB7E624E95C4A000F9308 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +270,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70AB7EA24E95D6F000F9308 /* RepositoryListViewController.xib in Resources */,
 				D70AB7BF24E95BC0000F9308 /* LaunchScreen.storyboard in Resources */,
+				D70AB82A24E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib in Resources */,
 				D70AB7BC24E95BC0000F9308 /* Assets.xcassets in Resources */,
-				D70AB7BA24E95BBD000F9308 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70AB7B724E95BBD000F9308 /* ViewController.swift in Sources */,
 				D70AB7B324E95BBD000F9308 /* AppDelegate.swift in Sources */,
 				D70AB7B524E95BBD000F9308 /* SceneDelegate.swift in Sources */,
+				D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */,
+				D70AB7E824E95CB9000F9308 /* RepositoryListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +337,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D70AB7B824E95BBD000F9308 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D70AB7B924E95BBD000F9308 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D70AB7BD24E95BC0000F9308 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = guadalupemontefusco.GitHanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -460,7 +492,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = guadalupemontefusco.GitHanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -9,13 +9,13 @@
 import Foundation
 
 struct RepositoriesList: Codable {
-    let total_count: Int
-    let incomplete_results: Bool
+    let totalCount: Int
+    let incompleteResults: Bool
     let items: [Items]
 
     enum CodingKeys: String, CodingKey {
-        case total_count = "total_count"
-        case incomplete_results = "incomplete_results"
+        case totalCount = "total_count"
+        case incompleteResults = "incomplete_results"
         case items = "items"
     }
 }

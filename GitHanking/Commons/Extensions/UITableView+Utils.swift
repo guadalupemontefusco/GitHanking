@@ -1,5 +1,5 @@
 //
-//  UITableView+Extensions.swift
+//  UITableView+Utils.swift
 //  GitHanking
 //
 //  Created by Guadalupe Montefusco de Oliveira on 22/08/20.

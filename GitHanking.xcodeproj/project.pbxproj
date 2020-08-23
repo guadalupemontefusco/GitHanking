@@ -18,6 +18,7 @@
 		D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */; };
 		D70AB82A24E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */; };
 		D71474B124F1FF9F00CB59D7 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */; };
+		D756FA6B24F22C3E00669407 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756FA6A24F22C3E00669407 /* CustomRefreshControl.swift */; };
 		D7C0217424F205F100DF1291 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0217324F205F100DF1291 /* BaseViewController.swift */; };
 		D7C0217624F208F100DF1291 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */; };
 		D7C0217724F208F100DF1291 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,6 +92,7 @@
 		D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRepositoryInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicRepositoryInfoTableViewCell.xib; sourceTree = "<group>"; };
 		D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
+		D756FA6A24F22C3E00669407 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
 		D7C0217324F205F100DF1291 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		D7C0217824F2127D00DF1291 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C0217324F205F100DF1291 /* BaseViewController.swift */,
+				D756FA6A24F22C3E00669407 /* CustomRefreshControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				D70AB7B324E95BBD000F9308 /* AppDelegate.swift in Sources */,
 				D7E340C524F1B5370013B58F /* GitHubAPI.swift in Sources */,
 				D7C0217E24F228C000DF1291 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
+				D756FA6B24F22C3E00669407 /* CustomRefreshControl.swift in Sources */,
 				D7E340CB24F1CF740013B58F /* RepositoriesList.swift in Sources */,
 				D7E340D124F1DCFB0013B58F /* GitHubErrorData.swift in Sources */,
 				D71474B124F1FF9F00CB59D7 /* Encodable+Dictionary.swift in Sources */,

@@ -33,7 +33,7 @@ final class RepositoryListViewModel {
                                             direction: .ascending, reposPerPage: numberOfReposPerPage)
         service.getRepositories(parametersList: parametersList) { [weak self] result in
             guard let self = self else { return }
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 switch result {
                 case .success(let list):
                     self.repositoriesList = list
@@ -45,3 +45,4 @@ final class RepositoryListViewModel {
         }
     }
 }
+

@@ -14,6 +14,7 @@ final class RepositoryListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: RepositoryListViewModel!
+    var refreshControl: CustomRefreshControl?
     
     // MARK: Initializers
     
@@ -33,17 +34,35 @@ final class RepositoryListViewController: BaseViewController {
         viewModel.viewDelegate = self
 
         setupTableView()
-        viewModel.getMostStarredRepos()
-        showLoading()
+        setupRefreshControl()
+        getMostStarredRepos()
     }
     
     // MARK: Convenience
+    
+    private func getMostStarredRepos() {
+        viewModel.getMostStarredRepos()
+        showLoading()
+    }
     
     private func setupTableView() {
         tableView.register(with: BasicRepositoryInfoTableViewCell.self)
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 200.0
         tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = CustomRefreshControl(screenBounds: UIScreen.main.bounds)
+        refreshControl?.addTarget(self, action: #selector(self.refreshViewState), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func refreshViewState() {
+        viewModel.repositoriesList = nil
+        refreshControl?.endRefreshing()
+        tableView.reloadData()
+        getMostStarredRepos()
     }
 }
 
@@ -59,7 +78,8 @@ extension RepositoryListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        return tableView.dequeueReusableCell(of: BasicRepositoryInfoTableViewCell.self, for: indexPath, configure: { cell in
+        return tableView.dequeueReusableCell(of: BasicRepositoryInfoTableViewCell.self,
+                                             for: indexPath, configure: { cell in
             let item = items[indexPath.row]
             cell.configure(with: item)
         })

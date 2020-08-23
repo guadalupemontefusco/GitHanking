@@ -28,10 +28,11 @@ class BasicRepositoryInfoTableViewCell: UITableViewCell {
     func configure(with listValues: Items) {
         ownerNicknameLabel.text = listValues.owner.login
         descriptionLabel.text = listValues.description
-        repositoryNameLabel.text = listValues.fullName
+        repositoryNameLabel.text = listValues.name
         stargazersCountLabel.text = "\(listValues.stargazersCount)"
-
-        ownerAvatarImageView.kf.setImage(with: URL(string: listValues.owner.avatarUrl), placeholder: nil, options: nil, progressBlock: nil) { [weak self] result in
+        
+        let avatarURL = URL(string: listValues.owner.avatarUrl)
+        ownerAvatarImageView.kf.setImage(with: avatarURL, placeholder: nil, options: nil, progressBlock: nil) { [weak self] result in
             switch result {
             case .success:
                 self?.ownerAvatarImageView.isHidden = false

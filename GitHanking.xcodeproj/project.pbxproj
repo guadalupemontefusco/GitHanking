@@ -16,7 +16,7 @@
 		D70AB7EA24E95D6F000F9308 /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */; };
 		D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */; };
 		D70AB82A24E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */; };
-		D70C21E224F2D21600943F2B /* LoadingFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C21E124F2D21600943F2B /* LoadingFooterTableViewCell.swift */; };
+		D70C21E224F2D21600943F2B /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C21E124F2D21600943F2B /* LoadingFooterView.swift */; };
 		D70C21EA24F3165200943F2B /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C21E924F3165200943F2B /* UIColor+Utils.swift */; };
 		D70C21EC24F3168700943F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70C21EB24F3168700943F2B /* LaunchScreen.storyboard */; };
 		D71474B124F1FF9F00CB59D7 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */; };
@@ -92,7 +92,7 @@
 		D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
 		D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRepositoryInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicRepositoryInfoTableViewCell.xib; sourceTree = "<group>"; };
-		D70C21E124F2D21600943F2B /* LoadingFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterTableViewCell.swift; sourceTree = "<group>"; };
+		D70C21E124F2D21600943F2B /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
 		D70C21E924F3165200943F2B /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		D70C21EB24F3168700943F2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 				D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */,
 				D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */,
 				D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */,
-				D70C21E124F2D21600943F2B /* LoadingFooterTableViewCell.swift */,
+				D70C21E124F2D21600943F2B /* LoadingFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 				D70AB7E824E95CB9000F9308 /* RepositoryListViewController.swift in Sources */,
 				D7E340C324F1B2CB0013B58F /* RepositoryListViewModel.swift in Sources */,
 				D7E340C724F1B9390013B58F /* GitHubService.swift in Sources */,
-				D70C21E224F2D21600943F2B /* LoadingFooterTableViewCell.swift in Sources */,
+				D70C21E224F2D21600943F2B /* LoadingFooterView.swift in Sources */,
 				D7E340C924F1BBC60013B58F /* ParametersList.swift in Sources */,
 				D7E340CD24F1D68A0013B58F /* GitHubError.swift in Sources */,
 				D7E340CF24F1DBD30013B58F /* BaseService.swift in Sources */,

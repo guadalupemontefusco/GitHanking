@@ -12,6 +12,7 @@ extension UIColor {
     
     static let topGreenGradientColor = UIColor(hex: 0x67ECD9)
     static let bottomOrangeGradientColor = UIColor(hex: 0xF56E0E)
+    static let crownYellowColor = UIColor(hex: 0xFFC02E)
 }
 extension UIColor {
     

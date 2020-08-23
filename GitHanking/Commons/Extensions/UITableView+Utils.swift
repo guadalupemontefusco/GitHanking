@@ -15,10 +15,6 @@ extension UITableView {
         register(nib, forCellReuseIdentifier: type.reuseIdentifier)
     }
     
-    func registerHeaderFooterView<T: UITableViewHeaderFooterView>(with type: T.Type) {
-        register(T.self, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
-    }
-    
     func dequeueReusableCell<T: UITableViewCell>(of type: T.Type, for indexPath: IndexPath, configure completion: ((T) -> Void)) -> T {
         guard let cell = self.dequeueReusableCell(withIdentifier: type.reuseIdentifier,
                                                   for: indexPath) as? T else {

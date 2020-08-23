@@ -12,7 +12,7 @@ class BaseService<E: TargetType> {
     
     private var provider: MoyaProvider<E>
     
-    init(showNetworkLogger: Bool = true) {
+    init(showNetworkLogger: Bool = false) {
         if showNetworkLogger {
             provider = MoyaProvider<E>(plugins: [NetworkLoggerPlugin()])
         } else {

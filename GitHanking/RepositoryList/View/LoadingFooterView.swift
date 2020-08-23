@@ -1,5 +1,5 @@
 //
-//  LoadingFooterTableViewCell.swift
+//  LoadingFooterView.swift
 //  GitHanking
 //
 //  Created by Guadalupe Montefusco de Oliveira on 23/08/20.
@@ -9,12 +9,22 @@
 import UIKit
 import NVActivityIndicatorView
 
-final class LoadingFooterTableViewCell: UITableViewHeaderFooterView {
+final class LoadingFooterView: UIView {
     
     var activityIndicatorView: NVActivityIndicatorView?
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        configureView()
+    }
+    
     func configureView() {
-        contentView.backgroundColor = .white
+        backgroundColor = .white
         configureActivityIndicator(with: .zero)
         activityIndicatorView?.startAnimating()
     }
@@ -25,7 +35,7 @@ final class LoadingFooterTableViewCell: UITableViewHeaderFooterView {
         activityIndicatorView.type = type
         activityIndicatorView.color = color
         activityIndicatorView.padding = padding
-        contentView.addSubview(activityIndicatorView)
+        addSubview(activityIndicatorView)
         self.activityIndicatorView = activityIndicatorView
         configureActivityIndicatorViewConstraints()
     }
@@ -34,8 +44,8 @@ final class LoadingFooterTableViewCell: UITableViewHeaderFooterView {
         activityIndicatorView?.translatesAutoresizingMaskIntoConstraints = false
         activityIndicatorView?.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
         activityIndicatorView?.widthAnchor.constraint(equalToConstant: 45.0).isActive = true
-        activityIndicatorView?.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
-        activityIndicatorView?.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
-        activityIndicatorView?.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        activityIndicatorView?.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        activityIndicatorView?.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
+        activityIndicatorView?.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
 }

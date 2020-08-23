@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
     
     private func setActivityIndicator() {
         let rect = CGRect(origin: .zero, size: CGSize(width: 50.0, height: 50.0))
-        configureActivityIndicator(with: rect, type: .circleStrokeSpin, color: .darkGray, padding: 5.0)
+        configureActivityIndicator(with: rect, type: .circleStrokeSpin, color: .topGreenGradientColor, padding: 5.0)
     }
     
     func configureActivityIndicator(with frame: CGRect, type: NVActivityIndicatorType,

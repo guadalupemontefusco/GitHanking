@@ -20,23 +20,24 @@ class BasicRepositoryInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        contentView.backgroundColor = .white
         ownerAvatarImageView.clipsToBounds = true
         ownerAvatarImageView.layer.cornerRadius = 10.0
-        ownerAvatarImageView.layer.borderColor = UIColor.lightGray.cgColor
-        ownerAvatarImageView.layer.borderWidth = 1.0
     }
     
     func configure(with listValues: Items) {
         ownerNicknameLabel.text = listValues.owner.login
         descriptionLabel.text = listValues.description
-        repositoryNameLabel.text = listValues.name
+        repositoryNameLabel.text = listValues.fullName
         stargazersCountLabel.text = "\(listValues.stargazersCount)"
 
-        if let avatarURLString = listValues.owner.avatar_url {
-            ownerAvatarImageView.kf.setImage(with: URL(string: avatarURLString))
-            ownerAvatarImageView.isHidden = false
-        } else {
-            ownerAvatarImageView.isHidden = true
+        ownerAvatarImageView.kf.setImage(with: URL(string: listValues.owner.avatarUrl), placeholder: nil, options: nil, progressBlock: nil) { [weak self] result in
+            switch result {
+            case .success:
+                self?.ownerAvatarImageView.isHidden = false
+            case .failure:
+                self?.ownerAvatarImageView.isHidden = true
+            }
         }
     }
 }

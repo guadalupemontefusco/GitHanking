@@ -12,9 +12,12 @@ import NVActivityIndicatorView
 final class RepositoryListViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+
     var viewModel: RepositoryListViewModel!
-    var refreshControl: CustomRefreshControl?
+    private var nextPage = 0
+    private var shouldFetchMoreRepos = false
+    private var pageIncrementFactor = 4
+    private var refreshControl: CustomRefreshControl?
     
     // MARK: Initializers
     
@@ -35,34 +38,31 @@ final class RepositoryListViewController: BaseViewController {
 
         setupTableView()
         setupRefreshControl()
-        getMostStarredRepos()
+        viewModel.getMostStarredRepos(nextPage: nextPage)
+        showLoading()
     }
     
     // MARK: Convenience
     
-    private func getMostStarredRepos() {
-        viewModel.getMostStarredRepos()
-        showLoading()
-    }
-    
     private func setupTableView() {
         tableView.register(with: BasicRepositoryInfoTableViewCell.self)
-        tableView.tableFooterView = UIView()
+        tableView.registerHeaderFooterView(with: LoadingFooterTableViewCell.self)
         tableView.estimatedRowHeight = 200.0
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedSectionFooterHeight = 200.0
+        tableView.sectionFooterHeight = UITableView.automaticDimension
     }
     
     private func setupRefreshControl() {
-        refreshControl = CustomRefreshControl(screenBounds: UIScreen.main.bounds)
-        refreshControl?.addTarget(self, action: #selector(self.refreshViewState), for: .valueChanged)
+        refreshControl = CustomRefreshControl(screenBounds: UIScreen.main.bounds,
+                                              color: .bottomOrangeGradientColor)
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
     }
     
-    @objc func refreshViewState() {
-        viewModel.repositoriesList = nil
-        refreshControl?.endRefreshing()
-        tableView.reloadData()
-        getMostStarredRepos()
+    @objc private func refresh() {
+        nextPage = 0
+        viewModel.getMostStarredRepos(nextPage: nextPage)
     }
 }
 
@@ -86,10 +86,39 @@ extension RepositoryListViewController: UITableViewDataSource {
     }
 }
 
+extension RepositoryListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let items = viewModel.repositoriesList?.items else { return }
+        
+        if indexPath.row == items.count - pageIncrementFactor,
+            shouldFetchMoreRepos {
+            print(indexPath.row)
+            nextPage += 1
+            shouldFetchMoreRepos = false
+            viewModel.getMostStarredRepos(nextPage: nextPage)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard shouldFetchMoreRepos else { return nil }
+        let footerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: LoadingFooterTableViewCell.reuseIdentifier) as? LoadingFooterTableViewCell
+        footerCell?.configureView()
+        return footerCell
+    }
+}
+
 extension RepositoryListViewController: RepositoryListViewModelViewDelegate {
 
     func repositoryListViewModel(_ viewModel: RepositoryListViewModel,
                                  didGetReposListWith result: Result<RepositoriesList, GitHubError>) {
+        refreshControl?.endRefreshing()
+        switch result {
+        case .success(let list):
+            shouldFetchMoreRepos = list.items.count != list.totalCount
+        case .failure(let error):
+            debugPrint(error) // TODO: handle error
+        }
         tableView.reloadData()
         hideLoading()
     }

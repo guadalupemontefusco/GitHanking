@@ -44,7 +44,7 @@ class CustomRefreshControl: UIRefreshControl {
                                                     type: type, color: color)
         activityIndicator.startAnimating()
         activityIndicator.center.x = screenBounds.width / 2
-        activityIndicator.frame.origin.y = -screenBounds.origin.y
+        activityIndicator.frame.origin.y = -screenBounds.origin.y + 15
         subviews[0].addSubview(activityIndicator)
     }
     

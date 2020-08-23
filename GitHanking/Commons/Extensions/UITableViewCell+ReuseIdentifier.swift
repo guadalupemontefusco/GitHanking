@@ -14,3 +14,10 @@ extension UITableViewCell {
         return String(describing: self)
     }
 }
+
+extension UITableViewHeaderFooterView {
+
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}

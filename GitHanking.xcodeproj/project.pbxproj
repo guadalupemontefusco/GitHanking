@@ -17,6 +17,14 @@
 		D70AB7EA24E95D6F000F9308 /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */; };
 		D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */; };
 		D70AB82A24E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */; };
+		D71474B124F1FF9F00CB59D7 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */; };
+		D7C0217424F205F100DF1291 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0217324F205F100DF1291 /* BaseViewController.swift */; };
+		D7C0217624F208F100DF1291 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */; };
+		D7C0217724F208F100DF1291 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7C0217924F2127D00DF1291 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0217824F2127D00DF1291 /* UITableView+Extensions.swift */; };
+		D7C0217B24F21D7800DF1291 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0217A24F21D7700DF1291 /* Kingfisher.framework */; };
+		D7C0217C24F21D7800DF1291 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0217A24F21D7700DF1291 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7C0217E24F228C000DF1291 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0217D24F228C000DF1291 /* UITableViewCell+ReuseIdentifier.swift */; };
 		D7E340B424F1AFDA0013B58F /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340A624F1AFDA0013B58F /* Moya.framework */; };
 		D7E340B524F1AFDA0013B58F /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340A624F1AFDA0013B58F /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7E340BE24F1AFDA0013B58F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340AB24F1AFDA0013B58F /* Alamofire.framework */; };
@@ -57,6 +65,8 @@
 			files = (
 				D7E340B524F1AFDA0013B58F /* Moya.framework in Embed Frameworks */,
 				D7E340BF24F1AFDA0013B58F /* Alamofire.framework in Embed Frameworks */,
+				D7C0217C24F21D7800DF1291 /* Kingfisher.framework in Embed Frameworks */,
+				D7C0217724F208F100DF1291 /* NVActivityIndicatorView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +90,12 @@
 		D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
 		D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRepositoryInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicRepositoryInfoTableViewCell.xib; sourceTree = "<group>"; };
+		D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
+		D7C0217324F205F100DF1291 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		D7C0217824F2127D00DF1291 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		D7C0217A24F21D7700DF1291 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		D7C0217D24F228C000DF1291 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		D7E340A224F1AFDA0013B58F /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		D7E340A324F1AFDA0013B58F /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		D7E340A424F1AFDA0013B58F /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
@@ -107,6 +123,8 @@
 			files = (
 				D7E340B424F1AFDA0013B58F /* Moya.framework in Frameworks */,
 				D7E340BE24F1AFDA0013B58F /* Alamofire.framework in Frameworks */,
+				D7C0217B24F21D7800DF1291 /* Kingfisher.framework in Frameworks */,
+				D7C0217624F208F100DF1291 /* NVActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +169,8 @@
 		D70AB7B124E95BBD000F9308 /* GitHanking */ = {
 			isa = PBXGroup;
 			children = (
-				D70AB7E624E95C4A000F9308 /* Network */,
-				D70AB7E524E95C41000F9308 /* ViewModel */,
-				D70AB7E424E95C38000F9308 /* Model */,
-				D70AB7E224E95C1E000F9308 /* View */,
+				D71474AD24F1FF4800CB59D7 /* Commons */,
+				D71474AC24F1FEF700CB59D7 /* RepositoryList */,
 				D70AB7B224E95BBD000F9308 /* AppDelegate.swift */,
 				D70AB7B424E95BBD000F9308 /* SceneDelegate.swift */,
 				D70AB7BB24E95BC0000F9308 /* Assets.xcassets */,
@@ -215,16 +231,64 @@
 			children = (
 				D7E340C424F1B5370013B58F /* GitHubAPI.swift */,
 				D7E340C624F1B9390013B58F /* GitHubService.swift */,
-				D7E340CE24F1DBD30013B58F /* BaseService.swift */,
-				D7E340D024F1DCFB0013B58F /* GitHubErrorData.swift */,
-				D7E340CC24F1D68A0013B58F /* GitHubError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D71474AC24F1FEF700CB59D7 /* RepositoryList */ = {
+			isa = PBXGroup;
+			children = (
+				D70AB7E624E95C4A000F9308 /* Network */,
+				D70AB7E524E95C41000F9308 /* ViewModel */,
+				D70AB7E424E95C38000F9308 /* Model */,
+				D70AB7E224E95C1E000F9308 /* View */,
+			);
+			path = RepositoryList;
+			sourceTree = "<group>";
+		};
+		D71474AD24F1FF4800CB59D7 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				D7C0217224F205E100DF1291 /* View */,
+				D71474AF24F1FF6C00CB59D7 /* Extensions */,
+				D71474AE24F1FF5600CB59D7 /* Network */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		D71474AE24F1FF5600CB59D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D7E340CC24F1D68A0013B58F /* GitHubError.swift */,
+				D7E340D024F1DCFB0013B58F /* GitHubErrorData.swift */,
+				D7E340CE24F1DBD30013B58F /* BaseService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D71474AF24F1FF6C00CB59D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D71474B024F1FF9F00CB59D7 /* Encodable+Dictionary.swift */,
+				D7C0217824F2127D00DF1291 /* UITableView+Extensions.swift */,
+				D7C0217D24F228C000DF1291 /* UITableViewCell+ReuseIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7C0217224F205E100DF1291 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7C0217324F205F100DF1291 /* BaseViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D7E340A124F1AFD90013B58F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7C0217A24F21D7700DF1291 /* Kingfisher.framework */,
+				D7C0217524F208F100DF1291 /* NVActivityIndicatorView.framework */,
 				D7E340AB24F1AFDA0013B58F /* Alamofire.framework */,
 				D7E340A624F1AFDA0013B58F /* Moya.framework */,
 				D7E340A424F1AFDA0013B58F /* ReactiveMoya.framework */,
@@ -379,6 +443,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -395,10 +461,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C0217924F2127D00DF1291 /* UITableView+Extensions.swift in Sources */,
 				D70AB7B324E95BBD000F9308 /* AppDelegate.swift in Sources */,
 				D7E340C524F1B5370013B58F /* GitHubAPI.swift in Sources */,
+				D7C0217E24F228C000DF1291 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				D7E340CB24F1CF740013B58F /* RepositoriesList.swift in Sources */,
 				D7E340D124F1DCFB0013B58F /* GitHubErrorData.swift in Sources */,
+				D71474B124F1FF9F00CB59D7 /* Encodable+Dictionary.swift in Sources */,
+				D7C0217424F205F100DF1291 /* BaseViewController.swift in Sources */,
 				D70AB7B524E95BBD000F9308 /* SceneDelegate.swift in Sources */,
 				D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */,
 				D70AB7E824E95CB9000F9308 /* RepositoryListViewController.swift in Sources */,

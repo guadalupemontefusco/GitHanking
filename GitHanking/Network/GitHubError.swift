@@ -6,8 +6,9 @@
 //  Copyright © 2020 Guadalupe Montefusco de Oliveira. All rights reserved.
 //
 
-enum GitHubError {
-    case parser
+enum GitHubError: Error {
+    case parse
+    case unknown
     case exception(GitHubErrorData)
 }
 

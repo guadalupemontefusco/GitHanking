@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+final class GitHubService: BaseService {
+    
+    func getRepositories(parametersList: ParametersList,
+                         completion: @escaping ((Result<RepositoriesList, GitHubError>) -> Void)) {
+        request(from: .searchRepositories(parametersList), responseType: RepositoriesList.self) { result in
+            switch result {
+            case .success(let list):
+                completion(.success(list))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+}

@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+struct ParametersList: Codable {
+    var language: CodeLanguage
+    var sort: Sort?
+    var nextPage: Int?
+    var direction: Direction?
+    var reposPerPage: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case language = "q"
+        case sort
+        case nextPage = "page"
+        case direction
+        case reposPerPage = "per_page"
+    }
+}
+
+enum Direction: String, Codable {
+    case descending = "desc"
+    case ascending = "asc"
+}
+
+enum CodeLanguage: String, Codable {
+    case swift = "language:swift"
+}
+
+enum Sort: String, Codable {
+    case stars
+    case forks
+    case updated
+}
+

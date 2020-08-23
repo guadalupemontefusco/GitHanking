@@ -17,6 +17,18 @@
 		D70AB7EA24E95D6F000F9308 /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */; };
 		D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */; };
 		D70AB82A24E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */; };
+		D7E340B424F1AFDA0013B58F /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340A624F1AFDA0013B58F /* Moya.framework */; };
+		D7E340B524F1AFDA0013B58F /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340A624F1AFDA0013B58F /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7E340BE24F1AFDA0013B58F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340AB24F1AFDA0013B58F /* Alamofire.framework */; };
+		D7E340BF24F1AFDA0013B58F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7E340AB24F1AFDA0013B58F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7E340C324F1B2CB0013B58F /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340C224F1B2CB0013B58F /* RepositoryListViewModel.swift */; };
+		D7E340C524F1B5370013B58F /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340C424F1B5370013B58F /* GitHubAPI.swift */; };
+		D7E340C724F1B9390013B58F /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340C624F1B9390013B58F /* GitHubService.swift */; };
+		D7E340C924F1BBC60013B58F /* ParametersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340C824F1BBC60013B58F /* ParametersList.swift */; };
+		D7E340CB24F1CF740013B58F /* RepositoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340CA24F1CF740013B58F /* RepositoriesList.swift */; };
+		D7E340CD24F1D68A0013B58F /* GitHubError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340CC24F1D68A0013B58F /* GitHubError.swift */; };
+		D7E340CF24F1DBD30013B58F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340CE24F1DBD30013B58F /* BaseService.swift */; };
+		D7E340D124F1DCFB0013B58F /* GitHubErrorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E340D024F1DCFB0013B58F /* GitHubErrorData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D7E340C024F1AFDA0013B58F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D7E340B524F1AFDA0013B58F /* Moya.framework in Embed Frameworks */,
+				D7E340BF24F1AFDA0013B58F /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D70AB7AF24E95BBD000F9308 /* GitHanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70AB7B224E95BBD000F9308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +80,24 @@
 		D70AB7E924E95D6F000F9308 /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
 		D70AB82724E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRepositoryInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D70AB82824E964A7000F9308 /* BasicRepositoryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicRepositoryInfoTableViewCell.xib; sourceTree = "<group>"; };
+		D7E340A224F1AFDA0013B58F /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		D7E340A324F1AFDA0013B58F /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		D7E340A424F1AFDA0013B58F /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
+		D7E340A524F1AFDA0013B58F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		D7E340A624F1AFDA0013B58F /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		D7E340A724F1AFDA0013B58F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D7E340A824F1AFDA0013B58F /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		D7E340A924F1AFDA0013B58F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D7E340AA24F1AFDA0013B58F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		D7E340AB24F1AFDA0013B58F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D7E340C224F1B2CB0013B58F /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
+		D7E340C424F1B5370013B58F /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		D7E340C624F1B9390013B58F /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		D7E340C824F1BBC60013B58F /* ParametersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersList.swift; sourceTree = "<group>"; };
+		D7E340CA24F1CF740013B58F /* RepositoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesList.swift; sourceTree = "<group>"; };
+		D7E340CC24F1D68A0013B58F /* GitHubError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubError.swift; sourceTree = "<group>"; };
+		D7E340CE24F1DBD30013B58F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		D7E340D024F1DCFB0013B58F /* GitHubErrorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubErrorData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E340B424F1AFDA0013B58F /* Moya.framework in Frameworks */,
+				D7E340BE24F1AFDA0013B58F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +134,7 @@
 				D70AB7C824E95BC0000F9308 /* GitHankingTests */,
 				D70AB7D324E95BC0000F9308 /* GitHankingUITests */,
 				D70AB7B024E95BBD000F9308 /* Products */,
+				D7E340A124F1AFD90013B58F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +196,8 @@
 		D70AB7E424E95C38000F9308 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D7E340C824F1BBC60013B58F /* ParametersList.swift */,
+				D7E340CA24F1CF740013B58F /* RepositoriesList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +205,7 @@
 		D70AB7E524E95C41000F9308 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D7E340C224F1B2CB0013B58F /* RepositoryListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,8 +213,30 @@
 		D70AB7E624E95C4A000F9308 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D7E340C424F1B5370013B58F /* GitHubAPI.swift */,
+				D7E340C624F1B9390013B58F /* GitHubService.swift */,
+				D7E340CE24F1DBD30013B58F /* BaseService.swift */,
+				D7E340D024F1DCFB0013B58F /* GitHubErrorData.swift */,
+				D7E340CC24F1D68A0013B58F /* GitHubError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D7E340A124F1AFD90013B58F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7E340AB24F1AFDA0013B58F /* Alamofire.framework */,
+				D7E340A624F1AFDA0013B58F /* Moya.framework */,
+				D7E340A424F1AFDA0013B58F /* ReactiveMoya.framework */,
+				D7E340A324F1AFDA0013B58F /* ReactiveSwift.framework */,
+				D7E340AA24F1AFDA0013B58F /* RxBlocking.framework */,
+				D7E340A924F1AFDA0013B58F /* RxCocoa.framework */,
+				D7E340A224F1AFDA0013B58F /* RxMoya.framework */,
+				D7E340A524F1AFDA0013B58F /* RxRelay.framework */,
+				D7E340A724F1AFDA0013B58F /* RxSwift.framework */,
+				D7E340A824F1AFDA0013B58F /* RxTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +249,8 @@
 				D70AB7AB24E95BBD000F9308 /* Sources */,
 				D70AB7AC24E95BBD000F9308 /* Frameworks */,
 				D70AB7AD24E95BBD000F9308 /* Resources */,
+				D7E340C024F1AFDA0013B58F /* Embed Frameworks */,
+				D7E340C124F1B05A0013B58F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -293,15 +368,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D7E340C124F1B05A0013B58F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D70AB7AB24E95BBD000F9308 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D70AB7B324E95BBD000F9308 /* AppDelegate.swift in Sources */,
+				D7E340C524F1B5370013B58F /* GitHubAPI.swift in Sources */,
+				D7E340CB24F1CF740013B58F /* RepositoriesList.swift in Sources */,
+				D7E340D124F1DCFB0013B58F /* GitHubErrorData.swift in Sources */,
 				D70AB7B524E95BBD000F9308 /* SceneDelegate.swift in Sources */,
 				D70AB82924E964A7000F9308 /* BasicRepositoryInfoTableViewCell.swift in Sources */,
 				D70AB7E824E95CB9000F9308 /* RepositoryListViewController.swift in Sources */,
+				D7E340C324F1B2CB0013B58F /* RepositoryListViewModel.swift in Sources */,
+				D7E340C724F1B9390013B58F /* GitHubService.swift in Sources */,
+				D7E340C924F1BBC60013B58F /* ParametersList.swift in Sources */,
+				D7E340CD24F1D68A0013B58F /* GitHubError.swift in Sources */,
+				D7E340CF24F1DBD30013B58F /* BaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +572,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHanking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,6 +593,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHanking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct GitHubErrorData: Codable, Error {
+    let message: String
+    let documentationURL: String
+    let errors: [ErrorContent]?
+
+    enum CodingKeys: String, CodingKey {
+        case message, errors
+        case documentationURL = "documentation_url"
+    }
+}
+
+struct ErrorContent: Codable {
+    let resource, field, code: String
+}

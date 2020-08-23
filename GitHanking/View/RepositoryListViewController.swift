@@ -12,10 +12,29 @@ final class RepositoryListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var viewModel: RepositoryListViewModel?
+    
+    // MARK: Initializers
+    
+    init(viewModel: RepositoryListViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    // MARK: View life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.viewDelegate = self
         setupTableView()
+        viewModel?.getMostStarredRepos()
     }
+    
+    // MARK: Convenience
     
     private func setupTableView() {
         let nib = UINib(nibName: "BasicRepositoryInfoTableViewCell", bundle: Bundle.main.self)
@@ -38,5 +57,13 @@ extension RepositoryListViewController: UITableViewDataSource {
 }
 
 extension RepositoryListViewController: UITableViewDelegate {
-    
+    // TODO: Call UITableViewDelegate methods
+}
+
+extension RepositoryListViewController: RepositoryListViewModelViewDelegate {
+
+    func repositoryListViewModel(_ viewModel: RepositoryListViewModel,
+                                 didGetReposListWith result: Result<RepositoriesList, GitHubError>) {
+        // TODO: Handle response
+    }
 }

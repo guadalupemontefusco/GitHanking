@@ -63,6 +63,17 @@ final class RepositoryListViewController: BaseViewController {
         nextPage = 0
         viewModel.getMostStarredRepos(nextPage: nextPage)
     }
+    
+    private func getMostStarredRepos() {
+        viewModel.getMostStarredRepos(nextPage: nextPage)
+        showLoading()
+    }
+    
+    func resetUI() {
+        viewModel.repositoriesList = nil
+        nextPage = 0
+        tableView.reloadData()
+    }
 }
 
 extension RepositoryListViewController: UITableViewDataSource {
@@ -148,8 +159,14 @@ extension RepositoryListViewController: RepositoryListViewModelViewDelegate {
         switch result {
         case .success(let list):
             shouldFetchMoreRepos = list.items.count != list.totalCount
-        case .failure(let error):
-            debugPrint(error) // TODO: handle error
+            tableView.isScrollEnabled = true
+        case .failure:
+            resetUI()
+            tableView.isScrollEnabled = false
+            tableView.addErrorView(retryAction: { [weak self] in
+                self?.getMostStarredRepos()
+                self?.tableView.removeErrorView()
+            })
         }
         tableView.reloadData()
         hideLoading()
